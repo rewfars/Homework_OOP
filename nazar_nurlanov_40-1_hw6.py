@@ -12,13 +12,13 @@ print(numbers)
 
 
 import random
-n = 5000
-resultOK = False
-first = 0
-last = n - 1
-pos = 0
+
 def binary_search(val):
-    global n, resultOK, first, last, pos
+    n = 5000
+    resultOK = False
+    first = 0
+    last = n - 1
+    pos = 0
 
     while first < last:
         middle = (first + last)//2
@@ -27,7 +27,7 @@ def binary_search(val):
             last = first
             resultOK = True
             pos = middle
-        else :
+        else:
             if val > middle:
                 first = middle+1
             else :
@@ -40,6 +40,6 @@ def binary_search(val):
     else:
         print('элемент не найден')
 
-val = random.randint(first, n)
+val = random.randint(0, 5000)
 print(val)
 binary_search(val)
